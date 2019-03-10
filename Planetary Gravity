@@ -1,0 +1,37 @@
+#include <iostream>
+
+int main() {
+  double earth_weight,planet_weight;
+  int choose_planet;
+  /*Lines #4-5 set the inital variable names.*/
+  
+  std::cout<<"What is your weight on Earth? (KG)\n";
+  std::cin>>earth_weight;
+  std::cout<<"What planet would you like to fight on? (Enter The Number)\n Venus = 1, Mars = 2, Jupiter = 3, Saturn = 4, Uranus = 5, Neptune = 6";
+  std::cin>>choose_planet;
+  /*Lines #8-11 gain user input and assign vaules based on given input into variables.*/
+  
+  if(choose_planet==1){
+    planet_weight=(earth_weight*0.78);
+  }
+  else if(choose_planet==2){
+    planet_weight=(earth_weight*0.39);
+  }
+  else if(choose_planet==3){
+    planet_weight=(earth_weight*2.65);
+  }
+  else if(choose_planet==4){
+    planet_weight=(earth_weight*1.17);
+  }
+  else if(choose_planet==5){
+    planet_weight=(earth_weight*1.05);
+  }
+  else if(choose_planet==6){
+    planet_weight=(earth_weight*1.23);
+  }
+/*Lines #14-31 are conditional statements based on the given user inputs from Lines #8-11*/
+ 
+std::cout<<"Your weight on Planet #"<<choose_planet<<" would be "<<planet_weight<<"kg.\n";
+/*Lines #34 presents/displays the final message based on calculations of the given user input*/
+return 0;
+}
