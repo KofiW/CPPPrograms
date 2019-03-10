@@ -1,0 +1,26 @@
+#include <iostream>
+
+int main() {
+/*The following line(s) will be used for introduction variables and/or initalizing values.*/
+  double pesos,reais,soles,dollars;
+  double pesos_conversion,reais_conversion,soles_conversion;
+  
+/*The following line(s) are for gaining user input and assigning inputs into variables*/
+  std::cout<<"Enter number of Colombian Pesos:\n";
+  std::cin>>pesos;
+  std::cout<<"Enter number of Brazilian Reais:\n";
+  std::cin>>reais;
+  std::cout<<"Enter number of Peruvian Soles:\n";
+  std::cin>>soles;
+  
+/*Conversion Rates: 1 Pesos = 0.051 USD, 1 Reais = 0.26 USD, and 1 Soles = 0.30 USD. The following lines of code will be assinging premade variables the corrosponding conversion rates.*/
+  pesos_conversion=0.051;
+  reais_conversion=0.26;
+  soles_conversion=0.30;
+  
+ /*The following line(s) will convert the given user inputs and total all of them up and store them in the dollar variable. Finally, will produce a final output based off calculations.*/
+  dollars=(pesos_conversion*pesos)+(reais_conversion*reais)+(soles_conversion*soles);
+  std::cout<<"US Dollars = $"<<dollars<<"\n"; 
+  
+  return 0;
+}
