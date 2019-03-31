@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main() {
+  
+  double height, weight, bmi;
+//Line(s)5: Creates 3 new double type variables.
+  
+  std::cout << "Type in your height (m): \n";
+  std::cin >> height;
+//Line(s)8-9: Asks for user's input on height and store that data into the height variable.
+  
+  std::cout<<"Type in your weight (kg): \n";
+  std::cin>>weight;
+//Line(s)12-13: Asks for user's input on weight and stores that data into the weight variable.
+
+  bmi=weight/(height*height);
+//Line(s)16: Uses the two variables (height & weight) to solve equation and store result in bmi variable.
+  
+	std::cout<<"Your body mass index is "<<bmi<<". \n";
+  //Displays the final result using chaining. 
+  
+  return 0;
+
+}
