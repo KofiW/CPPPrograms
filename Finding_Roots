@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+  
+  double a,b,c,root1,root2;
+/*Line(s) 5: Create's all the double variables that will be used in this project.*/
+
+	std::cout<<"Enter a:\n";
+		std::cin>>a;
+	std::cout<<"Enter b:\n";
+		std::cin>>b;
+	std::cout<<"Enter c:\n";
+		std::cin>>c;
+/*Line(s) 9-14: Gains user input by asking for different integers in the root equation and stores them in corresponding variables.*/
+  
+ root1=(-b+std::sqrt(b*b-4*a*c))/((2*a));
+ root2=(-b-std::sqrt(b*b-4*a*c))/((2*a));
+
+/*Line(s) 17-18: Uses the respective root fourmals to find the two different roots/x-intercepts for the given integers.*/
+
+ std::cout<<"Root 1 is "<<root1<<"\n";
+ std::cout<<"Root 2 is "<<root2<<"\n";
+/*Line(s) 22-23: Displays the result of the 2 root variables through output commands.*/
+  
+return 0; 
+}
