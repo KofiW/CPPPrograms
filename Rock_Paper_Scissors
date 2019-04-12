@@ -1,0 +1,73 @@
+/* This program will simulate the game of Rock, Paper, Scissors, Lizard, or Spock with the user. 
+
+Based off the number the computer generates, I'll check to see which number its in. 
+
+Let's say its one. I'll check to see if the user response is 3. If it is, the computer wins. If it isn't, the player wins. 
+
+I'll just have an if statements for the other two conditions as well. 
+
+Possibilites for winning/losing/drawing:
+1 > 3
+2 > 1
+3 > 2
+*/
+
+#include <iostream>
+#include <stdlib.h>
+
+int main(){
+
+srand (time(NULL));
+int computer = random() % 3+1;
+int user=0;
+  
+std::cout << "====================\n";
+std::cout << "rock paper scissors!\n";
+std::cout << "====================\n";
+
+std::cout << "1) ✊\n";
+std::cout << "2) ✋\n";
+std::cout << "3) ✌️\n";
+std::cout<<"\n"; 
+std::cout<<"Shoot!\n";
+std::cout<<"\n";
+std::cin>>user;
+  
+if (computer==1){
+  if(user==3){
+    std::cout<<"You Have Lost This Round!\n";
+  }
+  else if(computer==user){
+    std::cout<<"It's A Draw!\n"
+  }
+  else{
+    std::cout<<"You Win!\n";
+  }
+}  
+  
+if (computer==2){
+  if (user==1){
+    std::cout<<"You Have Lost This Round!\n";
+  }
+  else if(computer==user){
+    std::cout<<"It's A Draw!\n";
+  }
+  else{
+    std::cout<<"You Win!\n";
+  }
+}
+  
+if (computer==3){
+  if(user==2){
+    std::cout<<"You Have Lost This Round!\n";
+  }
+  else if(computer==user){
+    std::cout<<"It's A Draw\n";
+  }
+  else{
+    std::cout<<"You Win!\n";
+  }
+}
+  
+return 0; 
+}
