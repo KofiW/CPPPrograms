@@ -1,0 +1,34 @@
+#include <iostream>
+
+/* The way I'm going to solve this is:
+
+For each element/number of the index (i), I'm going to divide it by 3 at first and check the remainder to see if its 0 because if it is, I can THEN check to see if its also a multiple of 5 by dividing that index by 5. If it also is, I will replace the index with "FizzBuzz". 
+
+If it's not a multiple of 5 but still remains a multiple of 3, I will replace the index with "Fizz".
+
+If it's not a multiple of 3 to begin with, I can then skip to the check to see if its a multiple of 5, if it is, I will replace the index "Buzz".
+
+If it's none of these 3, I will just output the number of index. */
+
+int main(){
+  
+  for (int i=1;i<=100;i++){
+    
+    if(i%3==0){
+      if(i%5==0){
+        std::cout<<"FizzBuzz\n";
+      }
+      else{
+        std::cout<<"Fizz\n";
+      }
+    }
+    if(i%3!=0&&i%5==0){
+      std::cout<<"Buzz\n";
+    }
+    else{
+    	std::cout<<i<<"\n";  
+    }
+	}
+  
+return 0;    
+}
