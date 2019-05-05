@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+
+int main(){
+
+/*The following line(s) will be used for creating and initializing variables.*/
+    std::string user_input;
+    std::string user_input_revised;
+    std::string user_input_backwards;
+
+/*The following line(s) are for gathering and storing user input*/
+    std::cout<<"Enter a word that you want to check to see if it is a Palindrome or not.\n";
+    getline(std::cin,user_input);
+
+/*The following line(s) are for taking out spaces in the text provided by the user*/
+    for(int i=0;i<user_input.length();i++){
+        /*if(user_input[i]==' '){
+            i++;
+        }*/
+        if(isalpha(user_input[i])){
+            user_input_revised=user_input_revised+user_input[i];
+        }
+    }
+
+/*The following line(s) are for creating a loop that has the following parameters/goal:
+Backwards loop:
+- Starting from the last letter
+- Going down 1 letter at a time adding it to the user_input variable.
+- Adding everything 1 by 1.*/
+
+    for(int j=0;j<user_input_revised.length();j++){
+        user_input_backwards=user_input_revised[j]+user_input_backwards;
+    }
+
+/*The following lines compare the resulting temp variable (user_input_backwards) to the user input to see if they are the same or not.*/
+
+    if(user_input_revised==user_input_backwards){
+        std::cout<<"This word is a Palindrome!\n";
+    }
+    else{
+        std::cout<<"This word isn't a Palindrome!\n";
+    }
+
+
+
+return 0;
+
+}
